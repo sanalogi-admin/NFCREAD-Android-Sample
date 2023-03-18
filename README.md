@@ -1,5 +1,4 @@
 # NFCREAD SDK SAMPLE PROJECT!
--Please Visit More Details | Github; https://github.com/Sanalogi/NFCREAD-Android-SDK-Example
 
 NFC Read is a tool designed for reading and verifying the official documents such as identity cards or passports. An example use case can be a police officer performing ID checks on the street, where NFC Read can be used with ease via an Android or an IOS smartphone to scan and verify the presented official document. The application does not require any specialised equipment or additional training.
 
@@ -183,27 +182,6 @@ default:
 Please note that this step requires having a NFC developer account. For registering, please head to our [signup page](https://login.nfcread.com/signup)
 
 If you have a developer account, simply navigate to [login.nfcread.com](https://login.nfcread.com) and enter your credentials. Once logged in select "NFCRead SDK Key" on the leftmost menu, press on the "GENERATE NFCRead Mobile SDK Key" button and then follow through with the steps.
-
-## Reducing the size of your application
-
-One of the most commonly asked questions about the NFCRead is reducing the size of the library. Since we include external libraries for performing various scans inside the SDK, these packages comes with dynamically linked shared object
-libraries (.so) that are compiled for different CPU architectures used widely in the mobile phones. The list of these supported instruction sets are like in the following:
-
--armeabi-v7a (Instruction set for 32bit ARM Processors, versions v5 and v6 are deprecated)
-
--arm64-v8a (Instruction set for 64bit ARM Processors)
-
--x86 (Instruction set for 32bit Intel and AMD Processors)
-
--x86_64 (Instruction set for 64bit Intel and AMD Processors)
-
-To learn more details about these instruction sets and ABIs, please refer to [this link](https://developer.android.com/ndk/guides/abis).
-
-The way we suggest for reducing the size of your application is creating four separate APK files that are each compiled for a specific instruction set. Google Play Store supports [the publishing of multiple APK files](https://developer.android.com/google/play/publishing/multiple-apks)
-, hence it is possible to upload four different APK files and the Play Store application located on user devices will automatically determine which APK to be installed.
-
-
-More detailed instructions and information about splits function can be found in [here](https://developer.android.com/studio/build/configure-apk-splits)
 
 
 ### To prevent NFC related issues:
