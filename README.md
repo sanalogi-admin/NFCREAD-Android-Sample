@@ -106,16 +106,16 @@ public class MainActivity extends AppCompatActivity implements NfcScanResultInte
 protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
         switch (requestCode) {
-        case REQUEST_CODE_SCAN_CARD:
-        if (resultCode == Activity.RESULT_OK) {
-        PassportModel card = (PassportModel) data.getSerializableExtra(ScanCardIntent.RESULT_PAYCARDS_CARD);
-            
-        }
-        break;
+		case REQUEST_CODE_SCAN_CARD:
+			if (resultCode == Activity.RESULT_OK) {
+				PassportModel card = (PassportModel) data.getSerializableExtra(ScanCardIntent.RESULT_PAYCARDS_CARD);
+
+			}
+		break;
         default:
-        super.onActivityResult(requestCode, resultCode, data);
+        	super.onActivityResult(requestCode, resultCode, data);
         }
-        }
+}
 
 ```
 
@@ -194,5 +194,3 @@ Simply navigate to your proguard-rules.pro file and add the following rule:
 -keep class org.bouncycastle.** { *;}
 ```
 
-If there are further issues observed due to this crash, please get in contact with the NFCRead team if you're running a version of NFCRead SDK version 1.1.7 or later.
-Please make sure to add the logcat logs by filtering with NFCREAD tag.
