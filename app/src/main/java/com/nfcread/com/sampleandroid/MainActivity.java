@@ -45,6 +45,7 @@ public class MainActivity extends AppCompatActivity implements NfcScanResultInte
     TextView tvValidUntil;
     TextView tvGender;
     TextView tvNfcInfo;
+    TextView tvPersonalNumber;
     TextView tvNationality;
     ImageView imgFrontMain;
     ImageView imgbackMain;
@@ -62,6 +63,7 @@ public class MainActivity extends AppCompatActivity implements NfcScanResultInte
         setContentView(R.layout.activity_main);
         tvAction = findViewById(R.id.btnAction);
         btnReadNFC = findViewById(R.id.btnReadNfcChip);
+        tvPersonalNumber = findViewById(R.id.tvPersonalNumber);
         tvSureName = findViewById(R.id.tvSureName);
         tvGivenName = findViewById(R.id.tvGivenName);
         tvBirthDay = findViewById(R.id.tvBirthDay);
@@ -122,6 +124,7 @@ public class MainActivity extends AppCompatActivity implements NfcScanResultInte
                     tvValidUntil.setText("ValidUntil : " + card.getDateOfExpiry());
                     tvGender.setText("Gender : " + card.getGender());
                     tvNationality.setText("Nationality  : " + card.getNationality());
+                    tvPersonalNumber.setText("Personal Number  : " + card.getPersonalNumber());
                     tvAction.setText("New Scan");
                     //NFC okuması sırasındaki aşamaları isteğe göre ayarlar
                     String[] arr ={
