@@ -34,7 +34,7 @@ dependencies {
     implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
     implementation fileTree(include: ['*.jar', '*.aar'], dir: 'libs')
 
-    implementation 'org.bitbucket.sanalogi:nfc_read_android_sdk:0.0.8'
+    implementation 'org.bitbucket.sanalogi:nfc_read_android_sdk:0.0.9'
 
 
     testImplementation 'junit:junit:4.13.2'
